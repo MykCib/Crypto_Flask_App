@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>YEAR TO DATE</title>
+{% endblock %}
+
+{% block body %}
+<div class="main">
+    <h1>{{ day }}</h1>
+    <h2>Bitcoin</h2>
+    <h3>{{ btc_open_p }}</h3>
+    <h3>{{ btc_now }}</h3>
+    <h3 class="updown">{{ btc_up_down}}</h3>
+    
+    <h2>Ethereum</h2>
+    <h3>{{ eth_open_p }}</h3>
+    <h3>{{ eth_now }}</h3>
+    <h3 class="updown">{{ eth_up_down}}</h3>
+</div>
+
+{% endblock %}

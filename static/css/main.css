@@ -1,0 +1,43 @@
+.content{
+    color: rgb(175, 68, 68);
+}
+
+.main{
+    font-family: sans-serif;
+    text-align: center;
+    padding: 30px 1px;
+    color: #222831;
+}
+
+h2{
+    margin: auto;
+    padding: 30px;
+    text-align: center;
+    font-size: 55px;
+    
+}
+
+h3.updown{
+    font-size: 40px;
+    padding: 20px;
+
+}
+
+h3{
+    margin: auto;
+    padding: 7px;
+    text-align: center;
+    font-size: 25px;
+
+}
+
+h1{
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    font-size: 65px;
+}
+
+body{
+    background: #F6F5F5
+}
