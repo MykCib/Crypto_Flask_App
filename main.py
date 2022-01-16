@@ -151,8 +151,5 @@ def index():
         updated=updated
         )
 
-    #return '<p>{}</p> <p>Bitcoin</p> <p>{}</p> <p>{}</p> <p>{}</p> <p> Ethereum </p>  <p>{}</p> <p>{}</p> <p>{}</p>'.format(day,btc_open_p,btc_now,btc_down,eth_open_p,eth_now,eth_up)
-
-
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=8080, debug=True)
