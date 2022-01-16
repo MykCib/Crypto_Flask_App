@@ -6,4 +6,4 @@ This Python script was first written as a [Twitter Bot](https://github.com/MykCi
 
 Cryptocurrency prices are taken from [Cryptocompare](https://www.cryptocompare.com/).
 
-![daniel-clarke-yb-60sec-sh080-bg-paint-v002](https://user-images.githubusercontent.com/76180269/149669075-d881a0ca-abf9-430c-a3e5-cbed0192c4f5.jpg)
+Screenshot 2022-01-16 at 18.40.06<img width="1271" alt="image" src="https://user-images.githubusercontent.com/76180269/149669106-705284a1-c327-443d-836c-83fb198e115a.png">
