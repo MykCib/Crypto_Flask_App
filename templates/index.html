@@ -1,21 +1,34 @@
 {% extends 'base.html' %}
 
 {% block head %}
-<title>YEAR TO DATE</title>
+<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>BTC and ETH YEAR TO DATE</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 {% endblock %}
 
 {% block body %}
-<div class="main">
-    <h1>{{ day }}</h1>
-    <h2>Bitcoin</h2>
-    <h3>{{ btc_open_p }}</h3>
-    <h3>{{ btc_now }}</h3>
-    <h3 class="updown">{{ btc_up_down}}</h3>
+
+<div class="main" id="test">
+    <h1 class="animate-1">{{ day }}</h1>
+    <h2 class="animate-2">Bitcoin </h2>
+    <h3 class="animate-3">{{ btc_open_p }}</h3>
+    <h3 class="animate-4">{{ btc_now }}</h3>
+    <h3 class="animate-5">{{ btc_up_down}}</h3>
     
-    <h2>Ethereum</h2>
-    <h3>{{ eth_open_p }}</h3>
-    <h3>{{ eth_now }}</h3>
-    <h3 class="updown">{{ eth_up_down}}</h3>
+    <h2 class="animate-6">Ethereum</h2>
+    <h3 class="animate-7">{{ eth_open_p }}</h3>
+    <h3 class="animate-8">{{ eth_now }}</h3>
+    <h3 class="animate-9">{{ eth_up_down}}</h3>
+    
+    <p> 
+    <a href="https://github.com/MykCib/Crypto_Flask_App" class="fa fa-github animate-10" style="font-size:36px"></a>
+    <a href="https://twitter.com/24hour_tracker" class="fa fa-twitter animate-10" style="font-size:36px"></a>
+    </p>
+    
+    <p class="last">Last updated: {{ updated }}</p>
+    
 </div>
 
 {% endblock %}
