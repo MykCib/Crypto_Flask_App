@@ -34,6 +34,8 @@ def index():
     now = datetime.now()
 
     today =('%04d-%02d-%02d' %(now.year, now.month, now.day))
+    updated =('%04d-%02d-%02d %02d:%02d:%02d' %(now.year, now.month, now.day, now.hour, now.minute, now.second))
+
 
     if now.year == 2022:
         url_2 = "https://min-api.cryptocompare.com/data/pricehistorical?fsym=BTC&tsyms=USD&ts=1640995260&api_key={31112ee7cd727c3df5e945c1470830d08c90bf4e8d180427a68ed16f0d873e9c}"
@@ -94,7 +96,7 @@ def index():
 
     #btc_down_eth_up = ("📊 It is %s day of %d.\n\n#Bitcoin $BTC\n⬅️ Year open price: %s USD\n➡️ Current price: %s USD\n📉 Down: %s%%\n\n#Ethereum $ETH\n⬅️ Year open price: %s USD\n➡️ Current price: %s USD\n📈 Up: %s%%") %(this_day,now.year,btc_open_str,btc_price_str,btc_rounded,eth_open_str,eth_price_str,eth_rounded)
 
-    day =("It is %s day of %d.") %(this_day,now.year)
+    day =("It is %s day of %d") %(this_day,now.year)
     btc_open_p = "⬅️ Year open price: $%s" %(btc_open_str)
     btc_now = "➡️ Current price: $%s" %(btc_price_str)
     btc_up = "📈 Up: %s%%" %(btc_rounded)
@@ -112,7 +114,8 @@ def index():
         btc_up_down=btc_up,
         eth_open_p=eth_open_p,
         eth_now=eth_now,
-        eth_up_down=eth_up
+        eth_up_down=eth_up,
+        updated=updated
         )
     elif btc_precent > 0 and eth_precent < 0:
         return render_template('index.html',
@@ -122,7 +125,8 @@ def index():
         btc_up_down=btc_up,
         eth_open_p=eth_open_p,
         eth_now=eth_now,
-        eth_up_down=eth_down
+        eth_up_down=eth_down,
+        updated=updated
         )
     elif btc_precent < 0 and eth_precent < 0:
         return render_template('index.html',
@@ -132,7 +136,8 @@ def index():
         btc_up_down=btc_down,
         eth_open_p=eth_open_p,
         eth_now=eth_now,
-        eth_up_down=eth_down
+        eth_up_down=eth_down,
+        updated=updated
         )
     elif btc_precent < 0 and eth_precent > 0:
         return render_template('index.html',
@@ -142,7 +147,8 @@ def index():
         btc_up_down=btc_down,
         eth_open_p=eth_open_p,
         eth_now=eth_now,
-        eth_up_down=eth_up
+        eth_up_down=eth_up,
+        updated=updated
         )
 
     #return '<p>{}</p> <p>Bitcoin</p> <p>{}</p> <p>{}</p> <p>{}</p> <p> Ethereum </p>  <p>{}</p> <p>{}</p> <p>{}</p>'.format(day,btc_open_p,btc_now,btc_down,eth_open_p,eth_now,eth_up)
