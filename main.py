@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     
-    url_1 = "https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC,ETH&tsyms=USD&api_key={8c9268efb236eadda131471062bf662c5370c75a580fc659fc305d2540f48e34} "
+    url_1 = "https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC,ETH&tsyms=USD&api_key={****} " # API key is hidden
 
     response_1 = requests.request("GET", url_1)
 
@@ -38,8 +38,8 @@ def index():
 
 
     if now.year == 2022:
-        url_2 = "https://min-api.cryptocompare.com/data/pricehistorical?fsym=BTC&tsyms=USD&ts=1640995260&api_key={31112ee7cd727c3df5e945c1470830d08c90bf4e8d180427a68ed16f0d873e9c}"
-        url_3 = "https://min-api.cryptocompare.com/data/pricehistorical?fsym=ETH&tsyms=USD&ts=1640995260&api_key={31112ee7cd727c3df5e945c1470830d08c90bf4e8d180427a68ed16f0d873e9c}"
+        url_2 = "https://min-api.cryptocompare.com/data/pricehistorical?fsym=BTC&tsyms=USD&ts=1640995260&api_key={****}"    #API key is hidden
+        url_3 = "https://min-api.cryptocompare.com/data/pricehistorical?fsym=ETH&tsyms=USD&ts=1640995260&api_key={****}"    #API key is hidden
 
         response_2 = requests.request("GET", url_2)
         response_3 = requests.request("GET", url_3)
@@ -48,8 +48,8 @@ def index():
         json_3 = response_3.json()
 
     elif now.year == 2023:
-        url_2 = "https://min-api.cryptocompare.com/data/pricehistorical?fsym=BTC&tsyms=USD&ts=1672531260&api_key={31112ee7cd727c3df5e945c1470830d08c90bf4e8d180427a68ed16f0d873e9c}"
-        url_3 = "https://min-api.cryptocompare.com/data/pricehistorical?fsym=ETH&tsyms=USD&ts=1672531260&api_key={31112ee7cd727c3df5e945c1470830d08c90bf4e8d180427a68ed16f0d873e9c}"
+        url_2 = "https://min-api.cryptocompare.com/data/pricehistorical?fsym=BTC&tsyms=USD&ts=1672531260&api_key={****}"    #API key is hidden
+        url_3 = "https://min-api.cryptocompare.com/data/pricehistorical?fsym=ETH&tsyms=USD&ts=1672531260&api_key={****}"    #API key is hidden
 
         response_2 = requests.request("GET", url_2)
         response_3 = requests.request("GET", url_3)
